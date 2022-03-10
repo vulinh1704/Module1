@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let diemkt = +prompt('nhap diem kiem tra : ','');
+  let diemgk = +prompt('nhap diem giua ki : ','');
+  let diemck = +prompt('nhap diem cuoi ki : ','');
+  let tb =(diemgk + diemck + diemkt)/3;
+  if(tb >= 8.5)
+    document.write('HS gioi');
+  else if(tb < 8.5 && tb >= 6.5)
+    document.write('HS kha');
+  else if(tb < 6.5)
+    document.write('HS trung binh');
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="thang">
+<button onclick="myFunction()">Tính số ngày</button>
+<h5 id="output"></h5>
+<script>
+    let thang = document.getElementById('thang');
+    let output = document.getElementById('output');
+
+    function myFunction() {
+        thang = +thang.value;
+        switch (thang) {
+            case 1:
+                output.innerText = "Thang 1 co 31  ngay";
+                break;
+            case 2:
+                output.innerText = "Thang 1 co 28 hoac 29 ngay";
+                break;
+            case 3:
+                output.innerText = "Thang 1 co 31  ngay";
+                break;
+            case 4:
+                output.innerText = "Thang 4 co 30  ngay";
+                break;
+            case 5:
+                output.innerText = "Thang 5 co 31  ngay";
+                break;
+            case 6:
+                output.innerText = "Thang 6 co 30  ngay";
+                break;
+            case 7:
+                output.innerText = "Thang 7 co 31  ngay";
+                break;
+            case 8:
+                output.innerText = "Thang 8 co 30 ngay";
+                break;
+            case 9:
+                output.innerText = "Thang 9 co 31  ngay";
+                break;
+            case 10:
+                output.innerText = "Thang 10 co 31  ngay";
+                break;
+            case 11:
+                output.innerText = "Thang 11 co 30 ngay";
+                break;
+            case 12:
+                output.innerText = "Thang 12 co 31 ngay";
+                break;
+            default:
+                output.innerText = "Loi roi";
+        }
+    }
+</script>
+</body>
+</html>
