@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5 style="position: absolute; left: 60px; top: 60px">DO YOU LOVE ME ?</h5>
+<button onclick="myFunction()" style="position: absolute; left: 60px; top: 100px">Yes</button>
+<button onmouseover="Click()" id="cham" style="position: absolute; left: 100px; top: 100px">No</button>
+<script>
+    function myFunction() {
+        alert('I love you too <3');
+    }
+
+    function Click() {
+        let cham = document.getElementById('cham');
+        let x = Math.random(); // 0 0.99
+        let y = Math.random(); // 0 0.99
+        cham.style.top = y*500 + 'px';
+        cham.style.left = x*1000 + 'px';
+    }
+</script>
+</body>
+</html>
