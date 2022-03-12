@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick='bam()'>In ra 20 số nguyên tố đầu</button>
+<h3 id="in"></h3>
+<script>
+    function bam() {
+        var dem = 0;
+        for (let i = 2; ; i++) {
+            let count = 0;
+            for (let j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    count++;
+                }
+            }
+            if (count == 2) {
+                dem++;
+                document.write('Số nguyên tố ' + dem + ' : ' + i + '<br>');
+            }
+            if (dem == 20) {
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
