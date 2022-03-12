@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap vao 1 so lon hon 0 :
+<br/>
+<input type="text" id="num">
+<button onclick="nhap()">Enter</button>
+<br/>
+<h5 id="output"></h5>
+<script>
+    let num = document.getElementById("num");
+    function nhap(){
+        num = parseInt(num.value);
+        let sum = 0;
+        let i ;
+        for (i = 1 ; i <= num ; i++){
+            sum += i;
+        }
+        alert(num);
+    document.getElementById("output").innerHTML = "Tong tu 1 den " + num + " = " + sum;
+    }
+</script>
+</body>
+</html>
