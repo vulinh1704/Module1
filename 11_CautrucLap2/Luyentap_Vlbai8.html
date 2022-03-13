@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="nhan()">Start</button>
+<button onclick="nhan()">Again</button>
+<script>
+    var num = Math.random() * 5;
+
+    function nhan() {
+        for (let i = 0; i < 3; i++) {
+            let a = parseInt(prompt('nhap 1 so 1-5 : ', ''));
+            if (a == num) {
+                alert('ban da thang ! ');
+                break;
+            } else {
+                alert('ban da thua !');
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
