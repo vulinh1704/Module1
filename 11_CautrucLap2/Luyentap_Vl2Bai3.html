@@ -18,13 +18,29 @@
     //     document.write(x + "<br>");
     //
     // }
-    var num = '*';
-    var num1 ='_';
-    for (let i = 1; i <= 5; i++) {
-        for (let j = 1; j <= 4; j++){
+    // var text = '';
+    // for (let i = 5; i >= 1; i--) {
+    //     for (let j = 1; j <= 5; j++) {
+    //         if (j >= i) {
+    //             text += '*';
+    //         } else {
+    //             text += '&ensp;';
+    //         }
+    //     }
+    //     text += '<br>';
+    // } document.write(text);
 
-        }
+    var text = '';
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            if (j >= i) {
+                text += '*';
+            } else {
+                text += '&ensp;';
             }
+        }
+        text += '<br>';
+    } document.write(text);
 </script>
 </body>
 </html>
