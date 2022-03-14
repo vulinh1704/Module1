@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num = 5 ** (1 / 2);
+    var n = +prompt('nhap n : ', '')
+    for (let i = 1; i <= n; i++) {
+        let fib = parseInt(1 / num * (((1 + num) / 2) ** i - ((1 - num) / 2) ** i));
+        document.write(fib + '<br>');
+    }
+
+</script>
+</body>
+</html>

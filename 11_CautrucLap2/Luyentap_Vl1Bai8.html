@@ -8,11 +8,10 @@
 <button onclick="nhan()">Start</button>
 <button onclick="nhan()">Again</button>
 <script>
-    var num = Math.random() * 5;
-
+    var num = parseInt(Math.random() * 5);
     function nhan() {
         for (let i = 0; i < 3; i++) {
-            let a = parseInt(prompt('nhap 1 so 1-5 : ', ''));
+            let a = parseInt(prompt('nhap 1 so 0-5 : ', ''));
             if (a == num) {
                 alert('ban da thang ! ');
                 break;
