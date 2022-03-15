@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="Nhap">
+<button onclick="Enter()">Enter</button>
+<script>
+    function Enter() {
+        let a = document.getElementById("Nhap");
+        a = a.value;
+        array = [];
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === a[i].toLowerCase()) {
+                array.push(a[i].toUpperCase());
+            } else {
+                array.push(a[i].toLowerCase());
+            }
+        }
+        document.write(array.join(''));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+English :<br/>
+<input type='text' id='English'>
+<button onclick="dich()">Dịch</button>
+<br/>
+Viet Nam
+<br/>
+<p id='VietNam'></p>
+<script>
+    var tudien = [
+        ['Hello', 'Xin chao'],
+        ['Bye', 'Tam Biet'],
+        ['Dog', 'Con cho'],
+        ['Cat', 'Con Meo'],
+        ['Chicken', 'Con ga']
+    ]
+    let E = document.getElementById('English');
+    let V = document.getElementById('VietNam');
+
+    function dich() {
+        V.innerText = "";
+        for (let i = 0; i < tudien.length; i++) {
+            if (tudien[i][0] === E.value) {
+                V.innerText = tudien[i][1];
+            }
+        }
+    }
+</script>
+</body>
+</html>

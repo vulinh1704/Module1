@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label forid="height">Nhập ô hàng số hàng</label>
+<br/>
+<input id="height">
+<br/>
+<br/>
+<label forid="width">Nhập ô hàng số cột</label>
+<br/>
+<input id="width">
+<br/>
+<button onclick="table()">Enter</button>
+<hr/>
+</body>
+<script>
+    let height = document.getElementById("height");
+    let width = document.getElementById("width");
+    function table(){
+    let sout = "<table border='1' >"
+    for (let i = 0; i <= height.value; i++) {
+        sout += "<tr/>";
+        for (let i = 0; i <= width.value; i++) {
+            sout += "<td>" + "</td>"
+        }
+        sout += "</tr>"
+    }
+    sout += "<table/>";
+    document.write(sout);
+    }
+</script>
+</html>
