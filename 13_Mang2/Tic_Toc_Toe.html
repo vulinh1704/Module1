@@ -14,23 +14,38 @@
 <br/>
 <input id="width">
 <br/>
+<br/>
 <button onclick="table()">Enter</button>
 <hr/>
 </body>
 <script>
     let height = document.getElementById("height");
     let width = document.getElementById("width");
-    function table(){
-    let sout = "<table border='1' >"
-    for (let i = 0; i <= height.value; i++) {
-        sout += "<tr/>";
-        for (let i = 0; i <= width.value; i++) {
-            sout += "<td>" + "</td>"
+    var mang = [[]];
+
+    function table() {
+        let sout = "<table border='1' >";
+        for (let i = 0; i <= height.value; i++) {
+            sout += "<tr/>";
+            for (let i = 0; i <= width.value; i++) {
+                sout += "<td>" + "<input type ='button' style='width: 20px color: white' id='danh' onclick='Fight()' value='X'>" + "</td>";
+            }
+            sout += "</tr>"
         }
-        sout += "</tr>"
+        sout += "<table/>";
+        document.write(sout );
     }
-    sout += "<table/>";
-    document.write(sout);
+
+    function Fight() {
+        let danh = document.getElementById('danh');
+        var x = 'x';
+        var o = 'o';
+        for (let row = 0; row <= height.value; row++) {
+            for (let col = 0; col <= width.value; col++) {
+                mang[row][col] = danh.value;
+
+            }
+        }
     }
 </script>
 </html>

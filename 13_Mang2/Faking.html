@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>Nhập vào đi</h1>
+    <textarea cols="50" rows="20" id="inp" onkeyup="typing()"></textarea>
+</center>
+<script>
+    let str = 'Tôi rất buồn ngủ!';
+    let text = document.getElementById("inp");
+    let i = 0;
+    let res = '';
+
+    function typing() {
+        res += str[i];
+        i++;
+        if(i > str.length){
+            res = '';
+            i = 0;
+        }
+        text.value = res;
+    }
+</script>
+</body>
+</html>
