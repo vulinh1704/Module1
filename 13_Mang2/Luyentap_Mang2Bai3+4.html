@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap Mang :
+<input type="text" id="Num">
+<button onclick="add()">Add Element</button>
+<button onclick="display()">Display</button>
+<h4 id="result"></h4>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add() {
+        array[x] = document.getElementById("Num").value;
+        x++;
+        document.getElementById("Num").value = '';
+    }
+
+    function display() {
+        let dem = 0;
+        let dem1 = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 1 === 0) {
+                dem++;
+            }else {
+                dem1++;
+            }
+        }
+        document.getElementById('result').innerText = 'Mang ki tu la : ' + array.join('_') + ' ; co ' + dem + ' ky tu so trong mang ' + ' ; co ' + dem1 + ' ky tu chu trong mang ';
+    }
+</script>
+</body>
+</html>

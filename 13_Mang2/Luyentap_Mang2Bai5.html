@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap Mang 1 :
+<input type="text" id="Num">
+<br>
+Nhap Mang 2 :
+<input type="text" id="Num1">
+<br>
+<button onclick="add()">Add Element 1</button>
+<button onclick="add1()">Add Element 2</button>
+<button onclick="display()">Display</button>
+<h4 id="result"></h4>
+<script>
+    let x = 0;
+    let y = 0;
+    let array = Array();
+    let array1 = Array();
+
+    function add() {
+        array[x] = document.getElementById("Num").value;
+        x++;
+        document.getElementById("Num").value = '';
+    }
+
+    function add1() {
+        array1[y] = document.getElementById("Num1").value;
+        y++;
+        document.getElementById("Num1").value = '';
+    }
+
+    function display() {
+        let indexOf = -1;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array1.length; j++) {
+                if (array[i] === array1[j]) {
+                    indexOf = -2;
+                    break;
+                }
+            }
+        }
+        if (indexOf == -2) {
+            document.getElementById('result').innerText = '2 chuoi giong nhau';
+        } else if (indexOf == -1) {
+            document.getElementById('result').innerText = '2 khong chuoi giong nhau';
+        }
+
+    }
+</script>
+</body>
+</html>
