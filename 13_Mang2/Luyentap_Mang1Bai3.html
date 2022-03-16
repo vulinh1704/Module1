@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Enter a number :
+<input type="text" id="Num">
+<button onclick="add()">Add 10 Element</button>
+<button onclick="display()">Display Number</button>
+<br>
+<h4 id="result"></h4>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add() {
+        array[x] = document.getElementById("Num").value;
+        x++;
+        document.getElementById("Num").value = '';
+    }
+
+    function display() {
+        let max = 0;
+        let index = 0;
+        let tb = 0;
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            max = array[0];
+            if (array[i] > max) {
+                max = array[i];
+                index = i;
+            }
+            sum += +array[i];
+            tb = sum/(+array.length);
+
+        }
+        document.getElementById("result").innerText = "Max = " + max + " at index " + index + " And tb = " + tb;
+    }
+</script>
+</body>
+</html>
