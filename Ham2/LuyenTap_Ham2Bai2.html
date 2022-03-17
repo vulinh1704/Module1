@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const pi = 3.412;
+    function square(radius){
+        let S = pi * radius * radius;
+        let C = 2 * radius  * pi;
+        return 'S = ' + S + ' ; '+ ' C = ' + C;
+    }
+    let radius = +prompt('Enter a number :' );
+    alert(square(radius));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhâp mảng kí tự : ');
+    let b = prompt('Nhâp kí tự bất kì : ');
+
+    function FindCharacter(arr, character) {
+        arr = arr.split(',');
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === character) {
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            return "Don't Find!";
+        } else {
+            return "Có " + dem + " ký tự trong chuỗi ";
+        }
+    }
+
+    alert(FindCharacter(a, b));
+</script>
+</body>
+</html>

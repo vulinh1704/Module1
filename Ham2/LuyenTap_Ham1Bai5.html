@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function findIndex(string){
+        a = arr1.indexOf(string);
+        if(a === -1){
+            return 'No Find!';
+        }else{
+            return arr2[a];
+        }
+    }
+    let string = prompt("Enter a string : ", " ");
+    alert(findIndex(string));
+</script>
+</body>
+</html>
