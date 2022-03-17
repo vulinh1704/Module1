@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Enter a Number : </h4>
+<input type="text" id="input">
+<button onclick='isPrime(document.getElementById("input").value)'>Check</button>
+<h4 id="output"></h4>
+<script>
+    let x = document.getElementById("input");
+    function isPrime(number) {
+        number = parseInt(number);
+        let count = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+
+            document.getElementById("output").innerText = number + ' la so nguyen to' ;
+        } else if (count != 2) {
+
+            document.getElementById("output").innerText = number + ' khong la so nguyen to';
+        }
+    }
+</script>
+</body>
+</html>
