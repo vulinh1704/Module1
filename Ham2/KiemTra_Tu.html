@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        s = s.split('');
+        console.log(s);
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] === s[s.length - i - 1]) {
+                    return  'chuoi doi xung';
+                }else{
+                    return 'chuoi khong doi xung';
+                }
+            }
+
+    }
+    let s = prompt('nhap chuoi : ');
+    alert(isPalindrome(s));
+</script>
+</body>
+</html>

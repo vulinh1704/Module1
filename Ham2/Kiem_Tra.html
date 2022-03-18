@@ -16,7 +16,9 @@
     // let max = arr[0][0];
     // let min = arr[0][0];
     let max = 0;
+    let min = 0;
     for (let i = 0; i < arr.length; i++) {
+        max = arr[i][0];
         for (let j = 0; j < arr[i].length; j++) {
             if (arr[i][j] % 2 === 0) {
                 document.write(arr[i][j] + " , ");
@@ -24,24 +26,38 @@
                 // if (min > arr[i][j]) {
                 //     min = arr[i][j];
                 // }
+                min = [i][0];
 
             } else {
                 tich = tich * arr[i][j];
             }
-            max =
+            if (max < arr[i][j]) {
+                max = arr[i][j];
+            }
 
 
             // if (max < arr[i][j]) {
             //     max = arr[i][j];
             // }
-
         }
+        // document.write('max hang ' + i + ' :' + max +'<br>');
 
     }
     document.write('<br>' + 'co ' + dem + ' phan tu chan' + '<br>');
     document.write('tich le  = ' + tich + '<br>');
     // document.write('max = ' + max);
     document.write('min = ' + min);
+
+
+    for (let i = 0; i < arr.length; i++) {
+        min = arr[0][i];
+        for (let j = 1; j < arr[i].length; j++) {
+            if(min > arr[i][j]){
+                min = arr[i][j];
+            }
+            document.write('min cot = ' + min + '<br>');
+        }
+    }
 </script>
 </body>
 </html>
