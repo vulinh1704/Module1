@@ -30,9 +30,9 @@
 
     function Convert() {
         let select = document.getElementById("select").value;
-        if (select == "Feet") {
+        if (select === "Feet") {
             footToMeter(x);
-        } else if (select == "Meter") {
+        } else if (select === "Meter") {
             meterToFoot(x);
         }
     }

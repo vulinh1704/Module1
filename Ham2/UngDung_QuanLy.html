@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product</title>
+    <style type="text/css">
+        .form-group {
+            background: #e5d8d8;
+            width: 25%;
+            height: 40px;
+            margin-left: 40px;
+            padding: 30px;
+        }
+
+        input {
+            width: 300px;
+            height: 25px;
+        }
+
+        button {
+            background: lightgreen;
+            width: 60px;
+            height: 30px;
+        }
+        table {
+            margin-left: 40px;
+            padding: 10px;
+        }
+        table {
+            border-collapse : collapse;
+            border-bottom: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+<lable><h3 style="margin-left: 50px">Add New Product</h3></lable>
+<div class="form-group">
+    <input class="form-control" type="text" id="add" placeholder="New Product">
+    <button onclick="addProduct()">Add</button>
+</div>
+<h3 style="margin-left: 50px">Display All Product</h3>
+<div class="panel-body">
+    <table>
+        <tr>
+            <thead>     `
+            <th>Product Name</th>
+            <th></th>
+            <th></th>
+            </thead>
+        </tr>
+        <tbody id="result"></tbody>
+    </table>
+</div>
+<script>
+    let add = document.getElementById("add");
+    let x = 0;
+    let arr = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4', 'Apple Iphone 6S',
+        'Xiaomi 5s Plus', 'Apple Iphone 8 Plus', 'Fujitsu F-04E', 'Oppo A71'];
+
+    function addProduct() {
+        arr[x] = add.value;
+        x++;
+        add.value = "";
+        let e = "<hr/>";
+        for (let i = 0; i < arr.length; i++) {
+            e += arr[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+
+    }
+
+    function editProduct(arr, x) {
+        let sout = "<input type = 'button' onclick='editProduct()' value = 'Edit'>";
+        let change = prompt('Edit : ', '');
+        arr.splice(x, 1, change);
+    }
+
+</script>
+</body>
+</html>
