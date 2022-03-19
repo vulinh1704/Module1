@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<canvas id ="myCanvas" width="200px" height="100px" style="border: 1px solid black" ></canvas>-->
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    // let Circle = function(radius) {
+    //     this.getRadius = function() {
+    //         return radius;
+    //     }
+    //     this.getArea = function() {
+    //         return Math.PI * radius * radius;
+    //     }
+    // };
+    // let circle = new Circle(2);
+    // console.log(circle.getRadius()); // 2
+    // console.log(circle.getArea()); // 12.566370614359172
+    // let c = document.getElementById("myCanvas");
+    // let ctx = c.getContext("2d");
+    // ctx.beginPath();
+    // ctx.arc(95,50,40,0,2*Math.PI);
+    // ctx.stroke();
+    // var canvas = document.getElementById('myCanvas');
+    // var context = canvas.getContext('2d');
+    // var imageObj = new Image();
+    // imageObj.onload = function() {
+    //     context.drawImage(imageObj, 69, 50);
+    // };
+    // imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darthvader.jpg';
+
+
+    // function student(id , name , address){
+    //     this.id = id;
+    //     this.name = name;
+    //     this.address = address;
+    //     this.getInfor =  function (){
+    //         return "Id= " + this.id + " name= " + this.name + " Address= " + this.address;
+    //     }
+    // }
+    // let Student = new student(1, "Truong Dang A","Ha Noi");
+    // console.log(Student.getInfor());
+
+
+    // let student = {
+    //     id: 1,
+    //     name: "Nguyen Van A",
+    //     address: "Ha noi",
+    //     getInfor: function () {
+    //         return "Id= " + this.id + " name= " + this.name + " Address= " + this.address;
+    //     }
+    // }
+
+    // let c = document.getElementById("myCanvas");
+    // let ctx = c.getContext("2d");
+    // ctx.moveTo(0,0);
+    // ctx.lineTo(200,100);
+    // ctx.stroke();
+
+    // let c = document.getElementById("myCanvas");
+    // let ctx = c.getContext("2d");
+    // ctx.beginPath();
+    // ctx.arc(95,50,40,0,2*Math.PI);
+    // ctx.stroke();
+
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    // ctx.font = "30px Arial";
+    // ctx.fillText("Hello World",10,50);
+
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    //
+    // // Create gradient
+    // var grd = ctx.createLinearGradient(0,0,200,0);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+    //
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+</script>
+
+
+
+</body>
+</html>
