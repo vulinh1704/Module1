@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let buildTemperature = function(C){
+        this.C = C;
+
+        this.getF = function (){
+            return this.C * 1.8 + 32;
+        }
+        this.getK = function (){
+            return this.C + 273.15;
+        }
+        this.setC = function (C){
+            this.C = C
+        }
+    }
+    let BuildTemperature = new buildTemperature(25);
+    let F = BuildTemperature.getF();
+    let K = BuildTemperature.getK();
+    document.write('F = ' + F + ' and K = ' + K + '<br>');
+
+    BuildTemperature.setC(50);
+    F = BuildTemperature.getF();
+    K = BuildTemperature.getK();
+    document.write('F = ' + F + ' and K = ' + K + '<br>');
+</script>
+</body>
+</html>
