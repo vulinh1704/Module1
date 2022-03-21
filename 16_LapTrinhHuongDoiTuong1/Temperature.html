@@ -24,7 +24,8 @@
     let K = BuildTemperature.getK();
     document.write('F = ' + F + ' and K = ' + K + '<br>');
 
-    BuildTemperature.setC(50);
+    let C = prompt('Enter C : ', '');
+    BuildTemperature.setC(C);
     F = BuildTemperature.getF();
     K = BuildTemperature.getK();
     document.write('F = ' + F + ' and K = ' + K + '<br>');

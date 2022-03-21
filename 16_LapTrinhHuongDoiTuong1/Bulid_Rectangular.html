@@ -43,6 +43,8 @@
         let rectangular = new Rectangular(x, y, width, height);
         ctx.fillStyle = color;
         ctx.fillRect(rectangular.x, rectangular.y, rectangular.width, rectangular.height);
+
+
         let Acreage = rectangular.getAcreage();
         let Perimeter =rectangular.getPerimeter();
         ctx.font ="30px Arial";

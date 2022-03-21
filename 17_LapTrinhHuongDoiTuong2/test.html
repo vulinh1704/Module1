@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mobile(id, name) {
+        this.id = id;
+        this.name = name;
+        this.message = "";
+        this.setMessage = function (message) {
+            this.message = message;
+        }
+        this.getMessage = function () {
+            return this.message;
+        }
+        this.sendMessage = function (message, mobile) {
+            mobile.setMessage(message);
+        }
+    }
+
+    let iphone = new Mobile(1, "iphone");
+    let android = new Mobile(2, "android");
+    iphone.sendMessage("Message from iphone", android);
+    let message = android.getMessage();
+    console.log(message);
+
+    function Person(first, last, age, gender, interests) {
+        this.name = {
+            first,
+            last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+        this.bio = function() {
+            alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        };
+        this.greeting = function() {
+            alert('Hi! I\'m ' + this.name.first + '.');
+        };
+    };
+    var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+</script>
+</body>
+</html>
