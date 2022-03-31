@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ptBac1(a , b) {
+        if(a === 0){
+            if( b === 0 ){
+                return "Phương trình vô số nghiệm";
+            } else if (b !== 0){
+                return "Phương trình vô nghiệm";
+            }
+        } else if (a !== 0) {
+            return "Phuơng trình có nghiệm duy nhất : " + (-b / a);
+        }
+    }
+    document.write(ptBac1(5,8));
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findIndex(index, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === index) {
+                return i;
+            }
+        }
+    }
+
+    let array = [1, 2, 3, 4, 5, 7, 8, 9];
+    a = findIndex(4, array);
+    document.write(a + "<br>");
+
+
+
+    function checkElement(e, arr) {
+        let c = [];
+        if (arr.indexOf(e) === -1) {
+            return "No Found";
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === e) {
+                    c.push(i);
+                }
+            }
+            return c;
+        }
+    }
+
+    let arr1 = [1, 2, 4, 4, 5, 6, 7, 2];
+    let b = +prompt("Enter a Number :", "");
+    document.write(checkElement(b,arr1));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demNguyenAm(arr) {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 'a' || arr[i] === 'o' || arr[i] === 'e' || arr[i] === 'u' || arr[i] === 'i') {
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            return false;
+        } else {
+            return dem;
+        }
+    }
+
+    let b = prompt('Enter a string : ', '');
+    b = b.split('')
+    b = demNguyenAm(b);
+    document.write(b);
+</script>
+</body>
+</html>

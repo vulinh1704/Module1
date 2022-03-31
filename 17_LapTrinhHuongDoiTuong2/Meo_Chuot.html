@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mouse {
+        Micky(name, weight, speed, alive) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.alive = alive;
+        }
+
+        say(content) {
+            if (this.alive) {
+                return this.name + " say : " + content;
+            }
+        }
+    }
+
+    class cat {
+        meo(nameCat, weightCat, speedCat, mouse) {
+            this.nameCat = nameCat;
+            this.weightCat = weightCat;
+            this.speedCat = speedCat;
+        }
+
+        catchMouse(rat) {
+            if (this.speedCat > rat.speed) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        eatMouse(rat) {
+            if (this.catchMouse(rat) && rat.alive) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        sayCat(content) {
+            return this.nameCat + " say : " + content;
+        }
+
+        upWightCat(rat) {
+            if (this.eatMouse(rat)) {
+                this.weightCat = this.weightCat + rat.weight;
+            }
+        }
+    }
+
+    let rat1 = new mouse();
+    rat1.Micky("jerry", 20, 30, true);
+    let rat2 = new mouse();
+    rat2.Micky("jerry2", 10, 10, true);
+    let cat1 = new cat();
+    cat1.meo("tom", 40, 40);
+
+    rat1.say("Chit Chit");
+    rat2.say("chit chit");
+    cat1.sayCat("Meo Meo");
+
+    document.write(cat1.nameCat + " bat duoc : " + cat1.catchMouse(rat1) + "<br>");
+    document.write(cat1.nameCat + " bat duoc : " + cat1.catchMouse(rat2) + "<br>");
+
+    document.write(cat1.nameCat + " an : " + cat1.eatMouse(rat1) + "<br>");
+    document.write(cat1.nameCat + " an : " + cat1.eatMouse(rat2) + "<br>");
+
+    cat1.upWightCat(rat1);
+    document.write("Can nang cua  " + cat1.nameCat + " " + cat1.weightCat + "<br>");
+    cat1.upWightCat(rat2);
+    document.write("Can nang cua  " + cat1.nameCat + " " + cat1.weightCat);
+</script>
+</body>
+</html>
